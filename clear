@@ -1,0 +1,59 @@
+[1mdiff --git a/pom.xml b/pom.xml[m
+[1mindex ef63444..3ad406b 100644[m
+[1m--- a/pom.xml[m
+[1m+++ b/pom.xml[m
+[36m@@ -46,6 +46,11 @@[m
+              Add the springdoc-openapi dependency below this comment block.[m
+              The exact <dependency> block is given in the Week 1 lab guide.[m
+              ================================================================ -->[m
+[32m+[m		[32m<dependency>[m
+[32m+[m			[32m<groupId>org.springdoc</groupId>[m
+[32m+[m			[32m<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>[m
+[32m+[m			[32m<version>3.1.1</version>[m
+[32m+[m		[32m</dependency>[m
+ 	</dependencies>[m
+ [m
+ 	<build>[m
+[1mdiff --git a/src/main/java/uk/ac/westminster/products_api/HelloController.java b/src/main/java/uk/ac/westminster/products_api/HelloController.java[m
+[1mindex f709d2d..9401439 100644[m
+[1m--- a/src/main/java/uk/ac/westminster/products_api/HelloController.java[m
+[1m+++ b/src/main/java/uk/ac/westminster/products_api/HelloController.java[m
+[36m@@ -29,5 +29,7 @@[m [mpublic class HelloController {[m
+     }[m
+ [m
+     // TODO (Activity 3): add your /goodbye endpoint here.[m
+[32m+[m[32m    @GetMapping("/goodbye")[m
+[32m+[m[32m    public String goodbye(){return "Goodbye from Spring Boot!";}[m
+ [m
+ }[m
+[1mdiff --git a/src/main/java/uk/ac/westminster/products_api/Person.java b/src/main/java/uk/ac/westminster/products_api/Person.java[m
+[1mindex 52fe592..69c2f5d 100644[m
+[1m--- a/src/main/java/uk/ac/westminster/products_api/Person.java[m
+[1m+++ b/src/main/java/uk/ac/westminster/products_api/Person.java[m
+[36m@@ -17,11 +17,14 @@[m [mpublic class Person {[m
+ [m
+     private String name;[m
+ [m
+[32m+[m[32m    private String email;[m
+[32m+[m
+     public Person() {[m
+     }[m
+ [m
+[31m-    public Person(String name) {[m
+[32m+[m[32m    public Person(String name,String email) {[m
+         this.name = name;[m
+[32m+[m[32m        this.email= email;[m
+     }[m
+ [m
+     public String getName() {[m
+[36m@@ -32,6 +35,10 @@[m [mpublic class Person {[m
+         this.name = name;[m
+     }[m
+ [m
+[32m+[m[32m    public String getEmail(){return email;}[m
+[32m+[m
+[32m+[m[32m    public void setEmail(String Email) {this.email= email;}[m
+[32m+[m
+     // TODO (Activity 3): add the "email" field and its getter here.[m
+ [m
+ }[m
