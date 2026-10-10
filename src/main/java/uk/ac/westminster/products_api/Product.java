@@ -24,7 +24,8 @@ public class Product {
     public double getPrice() {
         return price;
     }
-    //tut 2
+    // Tutorial 2: verified getter removal
+    //drops the field from JSON
 }
 
 
