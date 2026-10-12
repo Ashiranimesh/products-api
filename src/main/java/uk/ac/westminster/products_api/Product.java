@@ -17,8 +17,17 @@ public class Product {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setNmae(String name){
+        this.name= name;
+
     }
 
     public double getPrice() {
@@ -26,6 +35,11 @@ public class Product {
     }
     // Tutorial 2: verified getter removal
     //drops the field from JSON
+
+    public void setPrice(double price){
+        this.price=price;
+    }
+
 }
 
 
