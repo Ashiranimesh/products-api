@@ -14,7 +14,7 @@ public class DigitalProduct extends Product {
 }
 
 @Override
-public String getSummery(){
+public String getSummary(){
     return "Digital: " + getName() + " | Download: " + downloadUrl;}
 
 public String getDownloadUrl(){return downloadUrl;}
