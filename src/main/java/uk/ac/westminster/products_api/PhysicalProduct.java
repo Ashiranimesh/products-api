@@ -18,4 +18,6 @@ public class PhysicalProduct extends Product{
     public String getDimensions(){
         return dimensions;
     }
+
+
 }

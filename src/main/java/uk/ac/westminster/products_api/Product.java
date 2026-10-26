@@ -40,6 +40,11 @@ public class Product {
         this.price=price;
     }
 
+    public String getSummery(){
+        return getName +  " — £" + getPrice();
+    }
+
 }
+
 
 

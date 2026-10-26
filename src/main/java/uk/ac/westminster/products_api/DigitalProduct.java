@@ -12,6 +12,11 @@ public class DigitalProduct extends Product {
     this.downloadUrl = downloadUrl;
     this.fileSizeMB = fileSizeMB;
 }
+
+@Override
+public String getSummery(){
+    return "Digital: " + getName() + " | Download: " + downloadUrl;}
+
 public String getDownloadUrl(){return downloadUrl;}
 
 public double getFileSizeMB(){return fileSizeMB;}
